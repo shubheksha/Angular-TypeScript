@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        {{::vm.title}}
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-2">Name:</div>
+                    <div class="col-md-6">{{vm.product.productName}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Code:</div>
+                    <div class="col-md-6">{{vm.product.productCode }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Description:</div>
+                    <div class="col-md-6">{{vm.product.description }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Availability:</div>
+                    <div class="col-md-6">{{vm.product.releaseDate|date }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Price:</div>
+                    <div class="col-md-6">{{ vm.product.price|currency }}</div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <img class="center-block img-responsive"
+                     style="width:200px;margin:2px;"
+                     ng-src="{{vm.product.imageUrl}}"
+                     title="{{vm.product.productName}}">
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-default"
+           ng-href="#productList"
+           style="width:80px">
+            < Back
+        </a>
+    </div>
+</div>

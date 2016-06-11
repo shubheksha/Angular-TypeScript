@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Acme Product Management</title>
+
+    <!-- Style sheets -->
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body ng-app="productManagement">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Acme Product Management</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ng-include="'app/products/productListView.html'"></div>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    
+    <!-- Application Script -->
+
+    <!-- Domain Classes -->
+
+    <!-- Services -->
+
+    <!-- Controllers -->
+</body>
+
+</html>

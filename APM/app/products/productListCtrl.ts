@@ -2,7 +2,7 @@ module app.productList {
     interface IProductListModel {
     title: string;
     showImage: boolean;
-    products: any []; 
+    products: app.domain.IProduct []; 
     toggleImage(): void;
 }
 

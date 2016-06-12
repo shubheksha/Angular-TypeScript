@@ -1,5 +1,4 @@
-<div class="panel panel-primary"
-     ng-controller="ProductListCtrl as vm">
+<div class="panel panel-primary">
     <div class="panel-heading"
          style="font-size:large">{{::vm.title}}
     </div>
@@ -30,7 +29,11 @@
                          style="width:50px;margin:2px"
                          title="{{product.productName}}">
                 </td>
-                <td>{{ product.productName}} </td>
+                 <td> 
+                    <a ng-href="#productDetail/{{product.productId}}">
+                         {{ product.productName}}
+                     </a> 
+                 </td> 
                 <td>{{ product.productCode }}</td>
                 <td>{{ product.releaseDate | date }}</td>
                 <td>{{ product.price | currency }}</td>

@@ -7,11 +7,13 @@ var app;
                 this.$resource = $resource;
             }
             DataAccessService.prototype.getProductResource = function () {
-                return this.$resource('api/products/:productId');
+                return this.$resource('/api/products/:productId');
             };
+            //for minification
             DataAccessService.$inject = ['$resource'];
             return DataAccessService;
         }());
+        common.DataAccessService = DataAccessService;
         angular
             .module("common.services")
             .service("dataAccessService", DataAccessService);

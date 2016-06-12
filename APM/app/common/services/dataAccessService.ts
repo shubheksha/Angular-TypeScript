@@ -1,6 +1,6 @@
 module app.common{
 	interface IDataAccessService{
-		getProductResource() : ng.resource.IResourceClass<IProductResource>
+		getProductResource(): ng.resource.IResourceClass<IProductResource>;
 	}
 
 	interface IProductResource extends
@@ -8,15 +8,15 @@ module app.common{
 
 	}
 
-	class DataAccessService implements IDataAccessService {
-
+export class DataAccessService implements IDataAccessService {
+		//for minification
 		static $inject = ['$resource']
 		constructor (private $resource: ng.resource.IResourceService ){
 
 		}
 
 		getProductResource() : ng.resource.IResourceClass<IProductResource> {
-			return this.$resource('api/products/:productId');
+			return this.$resource('/api/products/:productId');
 		}
 	}
 	angular

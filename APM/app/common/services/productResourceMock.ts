@@ -1,4 +1,4 @@
-/*
+
 module app.common {
 
     var mockResource = angular
@@ -68,4 +68,3 @@ module app.common {
         $httpBackend.whenGET(/app/).passThrough();
     }
 }
-*/

@@ -20,5 +20,6 @@ var app;
             };
             return Product;
         }());
+        domain.Product = Product;
     })(domain = app.domain || (app.domain = {}));
 })(app || (app = {}));
